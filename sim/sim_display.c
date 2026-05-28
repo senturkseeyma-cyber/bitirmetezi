@@ -17,6 +17,36 @@
 #define SLINE "------------------------------------------------------------"
 
 /* ================================================================
+ * YARDIMCI: Float'i %d.%Nd olarak yazdir (printf %f yerine)
+ * Cortex-M0 soft-float printf cok yavas — integer printf kullan.
+ * ================================================================ */
+static void pf1(float v)   /* 1 ondalik: 43.5 */
+{
+    int x = (int)(v * 10.0f + 0.5f);
+    printf("%d.%d", x / 10, x % 10);
+}
+static void pf3(float v)   /* 3 ondalik: 0.212 */
+{
+    int x = (int)(v * 1000.0f + 0.5f);
+    printf("%d.%03d", x / 1000, x % 1000);
+}
+static void pf2(float v)   /* 2 ondalik: 0.60 */
+{
+    int x = (int)(v * 100.0f + 0.5f);
+    printf("%d.%02d", x / 100, x % 100);
+}
+static int pf0(float v)    /* 0 ondalik: integer olarak don */
+{
+    return (int)(v + 0.5f);
+}
+static void pf4(float v)   /* 4 ondalik: 39.9254 */
+{
+    int w = (int)v;
+    int f = (int)((v - (float)w) * 10000.0f + 0.5f);
+    printf("%d.%04d", w, f);
+}
+
+/* ================================================================
  * YARDIMCI: Durum cubugu (0.0-1.0 araligini 20 karaktere esler)
  * ================================================================ */
 static void print_bar(float val)
@@ -45,13 +75,13 @@ void SimDisplay_PrintStep(uint8_t                   step_num,
     printf("%s\n", SLINE);
 
     /* ---- Sensor okuma tablosu ---- */
-    printf("  Sicaklik : %6.1f C      |  CO2     : %7.0f ppm\n",
-           pData->temperature_C, pData->co2_ppm);
-    printf("  Nem      : %6.1f %%      |  CO      : %7.1f ppm\n",
-           pData->humidity_pct,  pData->co_ppm);
-    printf("  Basinc   : %6.0f Pa     |  GPS     : %.4fN  %.4fE  %dm\n",
-           pData->pressure_Pa,
-           pData->latitude, pData->longitude, (int)pData->altitude_m);
+    printf("  Sicaklik : ");      pf1(pData->temperature_C);
+    printf(" C      |  CO2     : %7d ppm\n", pf0(pData->co2_ppm));
+    printf("  Nem      : ");      pf1(pData->humidity_pct);
+    printf(" %%      |  CO      : ");  pf1(pData->co_ppm);
+    printf(" ppm\n");
+    printf("  Basinc   : %6d Pa     |  GPS     : ", pf0(pData->pressure_Pa));
+    pf4(pData->latitude);  printf("N  "); pf4(pData->longitude); printf("E  %dm\n", (int)pData->altitude_m);
 
     /* ---- Kritik esik gostergesi ---- */
     printf("  Kritik?  : Sicak=%-5s CO2=%-5s CO=%-5s\n",
@@ -65,32 +95,17 @@ void SimDisplay_PrintStep(uint8_t                   step_num,
     {
         /* ---- Normalize degerler ve cubuklar ---- */
         printf("  Normalize Faktorler  (0.0 = Normal, 1.0 = Kritik):\n");
-        printf("    N_Sicak : %.3f  ", pResult->n_temp);
-        print_bar(pResult->n_temp);
-        printf("\n");
-
-        printf("    N_CO2   : %.3f  ", pResult->n_co2);
-        print_bar(pResult->n_co2);
-        printf("\n");
-
-        printf("    N_CO    : %.3f  ", pResult->n_co);
-        print_bar(pResult->n_co);
-        printf("\n");
-
-        printf("    N_Bsnc  : %.3f  ", pResult->n_pressure);
-        print_bar(pResult->n_pressure);
-        printf("\n");
-
-        printf("    N_Nem   : %.3f  ", pResult->n_humidity);
-        print_bar(pResult->n_humidity);
-        printf("\n");
+        printf("    N_Sicak : "); pf3(pResult->n_temp);     printf("  "); print_bar(pResult->n_temp);     printf("\n");
+        printf("    N_CO2   : "); pf3(pResult->n_co2);      printf("  "); print_bar(pResult->n_co2);      printf("\n");
+        printf("    N_CO    : "); pf3(pResult->n_co);       printf("  "); print_bar(pResult->n_co);       printf("\n");
+        printf("    N_Bsnc  : "); pf3(pResult->n_pressure); printf("  "); print_bar(pResult->n_pressure); printf("\n");
+        printf("    N_Nem   : "); pf3(pResult->n_humidity); printf("  "); print_bar(pResult->n_humidity); printf("\n");
 
         printf("%s\n", SLINE);
 
         /* ---- Fire Score ve karar ---- */
-        printf("  FIRE SCORE : %.3f  ", pResult->fire_score);
-        print_bar(pResult->fire_score);
-        printf("  (Esik: %.2f)\n", FIRE_SCORE_THRESHOLD);
+        printf("  FIRE SCORE : "); pf3(pResult->fire_score); printf("  "); print_bar(pResult->fire_score);
+        printf("  (Esik: "); pf2(FIRE_SCORE_THRESHOLD); printf(")\n");
 
         if (pResult->alarm)
         {

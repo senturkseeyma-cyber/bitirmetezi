@@ -81,10 +81,12 @@ int main(void)
     printf("  Algoritma: FireScore = 0.25*NT + 0.25*NCO2 +\n");
     printf("             0.25*NCO  + 0.15*NP  + 0.10*NH\n");
     printf("\n");
-    printf("  Alarm Esigi  : FireScore > %.2f\n", FIRE_SCORE_THRESHOLD);
-    printf("  Krit.Sicaklik: >= %.0f C\n",         TEMP_CRITICAL_C);
-    printf("  Krit.CO2     : >= %.0f ppm\n",        CO2_CRITICAL_PPM);
-    printf("  Krit.CO      : >= %.0f ppm\n",        CO_CRITICAL_PPM);
+    printf("  Alarm Esigi  : FireScore > %d.%02d\n",
+           (int)(FIRE_SCORE_THRESHOLD * 100) / 100,
+           (int)(FIRE_SCORE_THRESHOLD * 100) % 100);
+    printf("  Krit.Sicaklik: >= %d C\n",   (int)TEMP_CRITICAL_C);
+    printf("  Krit.CO2     : >= %d ppm\n", (int)CO2_CRITICAL_PPM);
+    printf("  Krit.CO      : >= %d ppm\n", (int)CO_CRITICAL_PPM);
     printf("\n");
     printf("  GPS Koordinat: 39.9254N  32.8597E  850m (Ankara/Orman)\n");
     printf("\n");
