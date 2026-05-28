@@ -12,9 +12,9 @@ if (-not (Test-Path $BUILD)) { New-Item -ItemType Directory -Path $BUILD | Out-N
 if (-not (Test-Path $GCC))   { Write-Host "[HATA] GCC yok" -ForegroundColor Red; exit 1 }
 $CPU = @("-mcpu=cortex-m0","-mthumb","-mfloat-abi=soft")
 $INC = @("-I$REPO\app","-I$REPO\algo","-I$REPO\sim","-I$REPO\drivers","-I$REPO\sensors","-I$REPO\lora","-I$REPO\power")
-$CF  = $CPU + @("-DORKO_SIM","-Wall","-Wextra","-O0","-g3","-fdata-sections","-ffunction-sections","-specs=nosys.specs") + $INC
+$CF  = $CPU + @("-DORKO_SIM","-Wall","-Wextra","-O0","-g3","-fdata-sections","-ffunction-sections") + $INC
 $ASF = $CPU + @("-g3")
-$LDF = $CPU + @("-T$REPO\linker\M031_sim.ld","-Wl,--gc-sections","-specs=nosys.specs","-lc","-lm","-lnosys","-Wl,-Map=$MAP")
+$LDF = $CPU + @("-T$REPO\linker\M031_sim.ld","-Wl,--gc-sections","-specs=rdimon.specs","-lc","-lm","-lrdimon","-Wl,-Map=$MAP")
 function GCC-Run([string[]]$a,[string]$lbl) { Write-Host "  $lbl" -ForegroundColor Cyan; & $GCC @a; if ($LASTEXITCODE -ne 0){Write-Host "[HATA] $lbl" -ForegroundColor Red;exit 1} }
 Write-Host "`n============================================================" -ForegroundColor Green
 Write-Host "  ORKO - Simulasyon Build" -ForegroundColor Green
@@ -34,14 +34,11 @@ Write-Host "  [OK] Build basarili  ->  build\orko_sim.elf" -ForegroundColor Gree
 Write-Host "============================================================`n" -ForegroundColor Green
 if (-not (Test-Path $FVP)){ Write-Host "[UYARI] FVP bulunamadi." -ForegroundColor Yellow;exit 0 }
 Write-Host "  FVP baslatiliyor..." -ForegroundColor Cyan
-Write-Host "  UART0 ciktisi stdout'a yonlendiriliyor (-C UART0.out_file=-)" -ForegroundColor Cyan
+Write-Host "  Semihosting aktif: printf direkt terminale gelir" -ForegroundColor Cyan
 Write-Host "============================================================`n" -ForegroundColor Green
 & $FVP `
     "-a" $ELF `
-    "--simlimit" "600000" `
-    "-C" "armcortexm0ct.semihosting-enable=0" `
-    "-C" "fvp_mps2.UART0.out_file=-" `
-    "-C" "fvp_mps2.UART0.shutdown_on_eot=1" `
+    "-C" "armcortexm0ct.semihosting-enable=1" `
     "-C" "fvp_mps2.telnetterminal0.start_telnet=0" `
     "-C" "fvp_mps2.telnetterminal1.start_telnet=0" `
     "-C" "fvp_mps2.telnetterminal2.start_telnet=0" `
