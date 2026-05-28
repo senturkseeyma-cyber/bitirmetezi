@@ -1091,7 +1091,7 @@ END GROUP
 LOAD C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp/crtend.o
 LOAD C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp/crtn.o
 
-.text           0x00000000     0xce0c
+.text           0x00000000     0xce4c
  *(.isr_vector)
  .isr_vector    0x00000000       0xc0 C:\Users\victus\Desktop\bitirmetezi\build\startup_M031Series.o
                 0x00000000                g_pfnVectors
@@ -1209,450 +1209,450 @@ LOAD C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/
  .text.SimDisplay_PrintStep
                 0x00000aec      0x39c C:\Users\victus\Desktop\bitirmetezi\build\sim_display.o
                 0x00000aec                SimDisplay_PrintStep
- .text.semi_write
-                0x00000e88       0x2e C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
  .text.FVP_UART0_Init
-                0x00000eb6        0xa C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
-                0x00000eb6                FVP_UART0_Init
- .text._write   0x00000ec0       0x22 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
-                0x00000ec0                _write
- .text._close   0x00000ee2       0x14 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
-                0x00000ee2                _close
- .text._fstat   0x00000ef6       0x1c C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
-                0x00000ef6                _fstat
- .text._isatty  0x00000f12       0x12 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
-                0x00000f12                _isatty
- .text._lseek   0x00000f24       0x16 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
-                0x00000f24                _lseek
- .text._read    0x00000f3a       0x16 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
-                0x00000f3a                _read
+                0x00000e88       0x20 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+                0x00000e88                FVP_UART0_Init
+ .text.uart_putchar
+                0x00000ea8       0x30 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .text._write   0x00000ed8       0x4a C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+                0x00000ed8                _write
+ .text._close   0x00000f22       0x14 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+                0x00000f22                _close
+ .text._fstat   0x00000f36       0x1c C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+                0x00000f36                _fstat
+ .text._isatty  0x00000f52       0x12 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+                0x00000f52                _isatty
+ .text._lseek   0x00000f64       0x16 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+                0x00000f64                _lseek
+ .text._read    0x00000f7a       0x16 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+                0x00000f7a                _read
  .text.stdio_exit_handler
-                0x00000f50       0x1c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-findfp.o)
+                0x00000f90       0x1c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-findfp.o)
  .text.cleanup_stdio
-                0x00000f6c       0x3c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-findfp.o)
+                0x00000fac       0x3c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-findfp.o)
  .text.global_stdio_init.part.0
-                0x00000fa8      0x110 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-findfp.o)
- .text.__sinit  0x000010b8       0x38 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-findfp.o)
-                0x000010b8                __sinit
+                0x00000fe8      0x110 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-findfp.o)
+ .text.__sinit  0x000010f8       0x38 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-findfp.o)
+                0x000010f8                __sinit
  .text.__sfp_lock_acquire
-                0x000010f0       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-findfp.o)
-                0x000010f0                __sfp_lock_acquire
+                0x00001130       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-findfp.o)
+                0x00001130                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x00001100       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-findfp.o)
-                0x00001100                __sfp_lock_release
+                0x00001140       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-findfp.o)
+                0x00001140                __sfp_lock_release
  .text._fwalk_sglue
-                0x00001110       0x44 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-fwalk.o)
-                0x00001110                _fwalk_sglue
- .text.printf   0x00001154       0x24 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-printf.o)
-                0x00001154                printf
- .text.putchar  0x00001178       0x14 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-putchar.o)
-                0x00001178                putchar
- .text._puts_r  0x0000118c       0xc8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-puts.o)
-                0x0000118c                _puts_r
- .text.puts     0x00001254       0x14 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-puts.o)
-                0x00001254                puts
- .text.setvbuf  0x00001268      0x1a8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-setvbuf.o)
-                0x00001268                setvbuf
- .text.__sread  0x00001410       0x28 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-stdio.o)
-                0x00001410                __sread
+                0x00001150       0x44 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-fwalk.o)
+                0x00001150                _fwalk_sglue
+ .text.printf   0x00001194       0x24 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-printf.o)
+                0x00001194                printf
+ .text.putchar  0x000011b8       0x14 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-putchar.o)
+                0x000011b8                putchar
+ .text._puts_r  0x000011cc       0xc8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-puts.o)
+                0x000011cc                _puts_r
+ .text.puts     0x00001294       0x14 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-puts.o)
+                0x00001294                puts
+ .text.setvbuf  0x000012a8      0x1a8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-setvbuf.o)
+                0x000012a8                setvbuf
+ .text.__sread  0x00001450       0x28 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-stdio.o)
+                0x00001450                __sread
  .text.__swrite
-                0x00001438       0x40 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-stdio.o)
-                0x00001438                __swrite
- .text.__sseek  0x00001478       0x2c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-stdio.o)
-                0x00001478                __sseek
+                0x00001478       0x40 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-stdio.o)
+                0x00001478                __swrite
+ .text.__sseek  0x000014b8       0x2c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-stdio.o)
+                0x000014b8                __sseek
  .text.__sclose
-                0x000014a4        0xc C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-stdio.o)
-                0x000014a4                __sclose
- .text.memset   0x000014b0       0x8c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-memset.o)
-                0x000014b0                memset
+                0x000014e4        0xc C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-stdio.o)
+                0x000014e4                __sclose
+ .text.memset   0x000014f0       0x8c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-memset.o)
+                0x000014f0                memset
  .text._close_r
-                0x0000153c       0x24 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-closer.o)
-                0x0000153c                _close_r
+                0x0000157c       0x24 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-closer.o)
+                0x0000157c                _close_r
  .text._lseek_r
-                0x00001560       0x28 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-lseekr.o)
-                0x00001560                _lseek_r
- .text._read_r  0x00001588       0x28 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-readr.o)
-                0x00001588                _read_r
+                0x000015a0       0x28 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-lseekr.o)
+                0x000015a0                _lseek_r
+ .text._read_r  0x000015c8       0x28 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-readr.o)
+                0x000015c8                _read_r
  .text._write_r
-                0x000015b0       0x28 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-writer.o)
-                0x000015b0                _write_r
+                0x000015f0       0x28 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-writer.o)
+                0x000015f0                _write_r
  .text.__retarget_lock_init_recursive
-                0x000015d8        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-lock.o)
-                0x000015d8                __retarget_lock_init_recursive
+                0x00001618        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-lock.o)
+                0x00001618                __retarget_lock_init_recursive
  .text.__retarget_lock_close_recursive
-                0x000015dc        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-lock.o)
-                0x000015dc                __retarget_lock_close_recursive
+                0x0000161c        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-lock.o)
+                0x0000161c                __retarget_lock_close_recursive
  .text.__retarget_lock_acquire_recursive
-                0x000015e0        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-lock.o)
-                0x000015e0                __retarget_lock_acquire_recursive
+                0x00001620        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-lock.o)
+                0x00001620                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x000015e4        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-lock.o)
-                0x000015e4                __retarget_lock_release_recursive
- .text.strlen   0x000015e8       0x60 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-strlen-stub.o)
-                0x000015e8                strlen
+                0x00001624        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-lock.o)
+                0x00001624                __retarget_lock_release_recursive
+ .text.strlen   0x00001628       0x60 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-strlen-stub.o)
+                0x00001628                strlen
  .text._malloc_trim_r
-                0x00001648       0xb0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-freer.o)
-                0x00001648                _malloc_trim_r
- .text._free_r  0x000016f8      0x1d4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-freer.o)
-                0x000016f8                _free_r
- .text.malloc   0x000018cc       0x14 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-malloc.o)
-                0x000018cc                malloc
+                0x00001688       0xb0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-freer.o)
+                0x00001688                _malloc_trim_r
+ .text._free_r  0x00001738      0x1d4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-freer.o)
+                0x00001738                _free_r
+ .text.malloc   0x0000190c       0x14 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-malloc.o)
+                0x0000190c                malloc
  .text._malloc_r
-                0x000018e0      0x564 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mallocr.o)
-                0x000018e0                _malloc_r
+                0x00001920      0x564 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mallocr.o)
+                0x00001920                _malloc_r
  .text.__malloc_lock
-                0x00001e44       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mlock.o)
-                0x00001e44                __malloc_lock
+                0x00001e84       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mlock.o)
+                0x00001e84                __malloc_lock
  .text.__malloc_unlock
-                0x00001e54       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mlock.o)
-                0x00001e54                __malloc_unlock
+                0x00001e94       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mlock.o)
+                0x00001e94                __malloc_unlock
  .text._vfprintf_r
-                0x00001e64     0x2490 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfprintf.o)
-                0x00001e64                _vfprintf_r
+                0x00001ea4     0x2490 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfprintf.o)
+                0x00001ea4                _vfprintf_r
  .text.__sbprintf
-                0x000042f4       0x8c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfprintf.o)
+                0x00004334       0x8c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfprintf.o)
  .text.__sprint_r
-                0x00004380       0x20 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-sprint_r.o)
-                0x00004380                __sprint_r
+                0x000043c0       0x20 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-sprint_r.o)
+                0x000043c0                __sprint_r
  .text._fclose_r
-                0x000043a0       0xd4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-fclose.o)
-                0x000043a0                _fclose_r
+                0x000043e0       0xd4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-fclose.o)
+                0x000043e0                _fclose_r
  .text.__sflush_r
-                0x00004474      0x148 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-fflush.o)
-                0x00004474                __sflush_r
+                0x000044b4      0x148 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-fflush.o)
+                0x000044b4                __sflush_r
  .text._fflush_r
-                0x000045bc       0x68 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-fflush.o)
-                0x000045bc                _fflush_r
+                0x000045fc       0x68 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-fflush.o)
+                0x000045fc                _fflush_r
  .text.__sfvwrite_r
-                0x00004624      0x300 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-fvwrite.o)
-                0x00004624                __sfvwrite_r
+                0x00004664      0x300 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-fvwrite.o)
+                0x00004664                __sfvwrite_r
  .text.__smakebuf_r
-                0x00004924       0xd8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-makebuf.o)
-                0x00004924                __smakebuf_r
+                0x00004964       0xd8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-makebuf.o)
+                0x00004964                __smakebuf_r
  .text.__swhatbuf_r
-                0x000049fc       0x58 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-makebuf.o)
-                0x000049fc                __swhatbuf_r
- .text._putc_r  0x00004a54       0x74 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-putc.o)
-                0x00004a54                _putc_r
+                0x00004a3c       0x58 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-makebuf.o)
+                0x00004a3c                __swhatbuf_r
+ .text._putc_r  0x00004a94       0x74 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-putc.o)
+                0x00004a94                _putc_r
  .text.__swbuf_r
-                0x00004ac8       0xb8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-wbuf.o)
-                0x00004ac8                __swbuf_r
+                0x00004b08       0xb8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-wbuf.o)
+                0x00004b08                __swbuf_r
  .text.__swsetup_r
-                0x00004b80       0xd4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-wsetup.o)
-                0x00004b80                __swsetup_r
- .text.memmove  0x00004c54      0x104 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-memmove.o)
-                0x00004c54                memmove
- .text.strncpy  0x00004d58       0x60 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-strncpy.o)
-                0x00004d58                strncpy
+                0x00004bc0       0xd4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-wsetup.o)
+                0x00004bc0                __swsetup_r
+ .text.memmove  0x00004c94      0x104 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-memmove.o)
+                0x00004c94                memmove
+ .text.strncpy  0x00004d98       0x60 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-strncpy.o)
+                0x00004d98                strncpy
  .text.__locale_mb_cur_max
-                0x00004db8       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-locale.o)
-                0x00004db8                __locale_mb_cur_max
+                0x00004df8       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-locale.o)
+                0x00004df8                __locale_mb_cur_max
  .text._localeconv_r
-                0x00004dc8        0x8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-localeconv.o)
-                0x00004dc8                _localeconv_r
+                0x00004e08        0x8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-localeconv.o)
+                0x00004e08                _localeconv_r
  .text._fstat_r
-                0x00004dd0       0x28 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-fstatr.o)
-                0x00004dd0                _fstat_r
+                0x00004e10       0x28 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-fstatr.o)
+                0x00004e10                _fstat_r
  .text._isatty_r
-                0x00004df8       0x24 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-isattyr.o)
-                0x00004df8                _isatty_r
- .text._sbrk_r  0x00004e1c       0x24 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-sbrkr.o)
-                0x00004e1c                _sbrk_r
- .text.sysconf  0x00004e40       0x1c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-sysconf.o)
-                0x00004e40                sysconf
- .text.memchr   0x00004e5c       0x70 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-memchr-stub.o)
-                0x00004e5c                memchr
- .text.memcpy   0x00004ecc       0xa8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-memcpy-stub.o)
-                0x00004ecc                memcpy
- .text.frexp    0x00004f74       0x70 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libm_a-s_frexp.o)
-                0x00004f74                frexp
- .text.quorem   0x00004fe4      0x15c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-dtoa.o)
- .text._dtoa_r  0x00005140     0x1174 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-dtoa.o)
-                0x00005140                _dtoa_r
+                0x00004e38       0x24 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-isattyr.o)
+                0x00004e38                _isatty_r
+ .text._sbrk_r  0x00004e5c       0x24 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-sbrkr.o)
+                0x00004e5c                _sbrk_r
+ .text.sysconf  0x00004e80       0x1c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-sysconf.o)
+                0x00004e80                sysconf
+ .text.memchr   0x00004e9c       0x70 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-memchr-stub.o)
+                0x00004e9c                memchr
+ .text.memcpy   0x00004f0c       0xa8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-memcpy-stub.o)
+                0x00004f0c                memcpy
+ .text.frexp    0x00004fb4       0x70 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libm_a-s_frexp.o)
+                0x00004fb4                frexp
+ .text.quorem   0x00005024      0x15c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-dtoa.o)
+ .text._dtoa_r  0x00005180     0x1174 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-dtoa.o)
+                0x00005180                _dtoa_r
  .text.__ascii_mbtowc
-                0x000062b4       0x2c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mbtowc_r.o)
-                0x000062b4                __ascii_mbtowc
- .text._Balloc  0x000062e0       0x58 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
-                0x000062e0                _Balloc
- .text._Bfree   0x00006338       0x14 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
-                0x00006338                _Bfree
+                0x000062f4       0x2c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mbtowc_r.o)
+                0x000062f4                __ascii_mbtowc
+ .text._Balloc  0x00006320       0x58 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x00006320                _Balloc
+ .text._Bfree   0x00006378       0x14 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x00006378                _Bfree
  .text.__multadd
-                0x0000634c       0xa4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
-                0x0000634c                __multadd
+                0x0000638c       0xa4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x0000638c                __multadd
  .text.__hi0bits
-                0x000063f0       0x60 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
-                0x000063f0                __hi0bits
+                0x00006430       0x60 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x00006430                __hi0bits
  .text.__lo0bits
-                0x00006450       0x8c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
-                0x00006450                __lo0bits
- .text.__i2b    0x000064dc       0x60 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
-                0x000064dc                __i2b
+                0x00006490       0x8c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x00006490                __lo0bits
+ .text.__i2b    0x0000651c       0x60 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x0000651c                __i2b
  .text.__multiply
-                0x0000653c      0x1b8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
-                0x0000653c                __multiply
+                0x0000657c      0x1b8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x0000657c                __multiply
  .text.__pow5mult
-                0x000066f4       0xd4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
-                0x000066f4                __pow5mult
+                0x00006734       0xd4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x00006734                __pow5mult
  .text.__lshift
-                0x000067c8       0xf4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
-                0x000067c8                __lshift
- .text.__mcmp   0x000068bc       0x4c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
-                0x000068bc                __mcmp
- .text.__mdiff  0x00006908      0x1a0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
-                0x00006908                __mdiff
- .text.__d2b    0x00006aa8       0xd0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
-                0x00006aa8                __d2b
+                0x00006808       0xf4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x00006808                __lshift
+ .text.__mcmp   0x000068fc       0x4c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x000068fc                __mcmp
+ .text.__mdiff  0x00006948      0x1a0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x00006948                __mdiff
+ .text.__d2b    0x00006ae8       0xd0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x00006ae8                __d2b
  .text._realloc_r
-                0x00006b78      0x328 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-reallocr.o)
-                0x00006b78                _realloc_r
+                0x00006bb8      0x328 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-reallocr.o)
+                0x00006bb8                _realloc_r
  .text.__ascii_wctomb
-                0x00006ea0       0x1c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-wctomb_r.o)
-                0x00006ea0                __ascii_wctomb
+                0x00006ee0       0x1c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-wctomb_r.o)
+                0x00006ee0                __ascii_wctomb
  .text._wcrtomb_r
-                0x00006ebc       0x54 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-wcrtomb.o)
-                0x00006ebc                _wcrtomb_r
+                0x00006efc       0x54 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-wcrtomb.o)
+                0x00006efc                _wcrtomb_r
  .text._wcsrtombs_r
-                0x00006f10       0x1c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-wcsrtombs.o)
-                0x00006f10                _wcsrtombs_r
- .text.__errno  0x00006f2c        0xc C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-errno.o)
-                0x00006f2c                __errno
+                0x00006f50       0x1c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-wcsrtombs.o)
+                0x00006f50                _wcsrtombs_r
+ .text.__errno  0x00006f6c        0xc C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-errno.o)
+                0x00006f6c                __errno
  .text.__assert_func
-                0x00006f38       0x40 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-assert.o)
-                0x00006f38                __assert_func
+                0x00006f78       0x40 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-assert.o)
+                0x00006f78                __assert_func
  .text._calloc_r
-                0x00006f78       0xb8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-callocr.o)
-                0x00006f78                _calloc_r
+                0x00006fb8       0xb8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-callocr.o)
+                0x00006fb8                _calloc_r
  .text._wcsnrtombs_l
-                0x00007030      0x118 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-wcsnrtombs.o)
-                0x00007030                _wcsnrtombs_l
+                0x00007070      0x118 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-wcsnrtombs.o)
+                0x00007070                _wcsnrtombs_l
  .text._wcsnrtombs_r
-                0x00007148       0x24 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-wcsnrtombs.o)
-                0x00007148                _wcsnrtombs_r
+                0x00007188       0x24 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-wcsnrtombs.o)
+                0x00007188                _wcsnrtombs_r
  .text.fiprintf
-                0x0000716c       0x24 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-fiprintf.o)
-                0x0000716c                fiprintf
+                0x000071ac       0x24 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-fiprintf.o)
+                0x000071ac                fiprintf
  .text._vfiprintf_r
-                0x00007190     0x1290 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfiprintf.o)
-                0x00007190                _vfiprintf_r
+                0x000071d0     0x1290 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfiprintf.o)
+                0x000071d0                _vfiprintf_r
  .text.__sbprintf
-                0x00008420       0x8c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfiprintf.o)
- .text.abort    0x000084ac       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-abort.o)
-                0x000084ac                abort
- .text.raise    0x000084bc       0x5c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-signal.o)
-                0x000084bc                raise
- .text._kill_r  0x00008518       0x28 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-signalr.o)
-                0x00008518                _kill_r
+                0x00008460       0x8c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfiprintf.o)
+ .text.abort    0x000084ec       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-abort.o)
+                0x000084ec                abort
+ .text.raise    0x000084fc       0x5c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-signal.o)
+                0x000084fc                raise
+ .text._kill_r  0x00008558       0x28 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-signalr.o)
+                0x00008558                _kill_r
  .text._getpid_r
-                0x00008540        0x8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-signalr.o)
-                0x00008540                _getpid_r
- .text._getpid  0x00008548       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(getpid.o)
-                0x00008548                _getpid
- .text._kill    0x00008558       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(kill.o)
-                0x00008558                _kill
- .text._sbrk    0x00008568       0x1c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(sbrk.o)
-                0x00008568                _sbrk
- .text._exit    0x00008584        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
-                0x00008584                _exit
- .text          0x00008588      0x114 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
-                0x00008588                __aeabi_uidiv
-                0x00008588                __udivsi3
-                0x00008694                __aeabi_uidivmod
- .text          0x0000869c      0x1d4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
-                0x0000869c                __divsi3
-                0x0000869c                __aeabi_idiv
-                0x00008868                __aeabi_idivmod
- .text          0x00008870        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
-                0x00008870                __aeabi_idiv0
-                0x00008870                __aeabi_ldiv0
- .text          0x00008874       0x7c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_arm_cmpdf2.o)
-                0x00008874                __aeabi_cdrcmple
-                0x00008884                __aeabi_cdcmple
-                0x00008884                __aeabi_cdcmpeq
-                0x00008894                __aeabi_dcmpeq
-                0x000088a0                __aeabi_dcmplt
-                0x000088b4                __aeabi_dcmple
-                0x000088c8                __aeabi_dcmpgt
-                0x000088dc                __aeabi_dcmpge
- .text          0x000088f0       0x74 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_arm_cmpsf2.o)
-                0x000088f0                __aeabi_cfrcmple
-                0x000088f8                __aeabi_cfcmpeq
-                0x000088f8                __aeabi_cfcmple
-                0x00008908                __aeabi_fcmpeq
-                0x00008914                __aeabi_fcmplt
-                0x00008928                __aeabi_fcmple
-                0x0000893c                __aeabi_fcmpgt
-                0x00008950                __aeabi_fcmpge
- .text          0x00008964       0x40 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_aeabi_uldivmod.o)
-                0x00008964                __aeabi_uldivmod
+                0x00008580        0x8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-signalr.o)
+                0x00008580                _getpid_r
+ .text._getpid  0x00008588       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(getpid.o)
+                0x00008588                _getpid
+ .text._kill    0x00008598       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(kill.o)
+                0x00008598                _kill
+ .text._sbrk    0x000085a8       0x1c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(sbrk.o)
+                0x000085a8                _sbrk
+ .text._exit    0x000085c4        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+                0x000085c4                _exit
+ .text          0x000085c8      0x114 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+                0x000085c8                __aeabi_uidiv
+                0x000085c8                __udivsi3
+                0x000086d4                __aeabi_uidivmod
+ .text          0x000086dc      0x1d4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+                0x000086dc                __divsi3
+                0x000086dc                __aeabi_idiv
+                0x000088a8                __aeabi_idivmod
+ .text          0x000088b0        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+                0x000088b0                __aeabi_idiv0
+                0x000088b0                __aeabi_ldiv0
+ .text          0x000088b4       0x7c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_arm_cmpdf2.o)
+                0x000088b4                __aeabi_cdrcmple
+                0x000088c4                __aeabi_cdcmple
+                0x000088c4                __aeabi_cdcmpeq
+                0x000088d4                __aeabi_dcmpeq
+                0x000088e0                __aeabi_dcmplt
+                0x000088f4                __aeabi_dcmple
+                0x00008908                __aeabi_dcmpgt
+                0x0000891c                __aeabi_dcmpge
+ .text          0x00008930       0x74 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_arm_cmpsf2.o)
+                0x00008930                __aeabi_cfrcmple
+                0x00008938                __aeabi_cfcmpeq
+                0x00008938                __aeabi_cfcmple
+                0x00008948                __aeabi_fcmpeq
+                0x00008954                __aeabi_fcmplt
+                0x00008968                __aeabi_fcmple
+                0x0000897c                __aeabi_fcmpgt
+                0x00008990                __aeabi_fcmpge
+ .text          0x000089a4       0x40 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+                0x000089a4                __aeabi_uldivmod
  .text.__udivmoddi4
-                0x000089a4      0x190 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
-                0x000089a4                __udivmoddi4
+                0x000089e4      0x190 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
+                0x000089e4                __udivmoddi4
  .text.__aeabi_fadd
-                0x00008b34      0x458 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(addsf3.o)
-                0x00008b34                __aeabi_fadd
+                0x00008b74      0x458 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(addsf3.o)
+                0x00008b74                __aeabi_fadd
  .text.__aeabi_fdiv
-                0x00008f8c      0x22c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(divsf3.o)
-                0x00008f8c                __aeabi_fdiv
- .text.__eqsf2  0x000091b8       0x58 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(eqsf2.o)
-                0x000091b8                __eqsf2
-                0x000091b8                __nesf2
- .text.__gesf2  0x00009210       0xa0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(gesf2.o)
-                0x00009210                __gesf2
-                0x00009210                __gtsf2
- .text.__lesf2  0x000092b0       0xa0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(lesf2.o)
-                0x000092b0                __ltsf2
-                0x000092b0                __lesf2
+                0x00008fcc      0x22c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(divsf3.o)
+                0x00008fcc                __aeabi_fdiv
+ .text.__eqsf2  0x000091f8       0x58 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(eqsf2.o)
+                0x000091f8                __eqsf2
+                0x000091f8                __nesf2
+ .text.__gesf2  0x00009250       0xa0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(gesf2.o)
+                0x00009250                __gesf2
+                0x00009250                __gtsf2
+ .text.__lesf2  0x000092f0       0xa0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(lesf2.o)
+                0x000092f0                __ltsf2
+                0x000092f0                __lesf2
  .text.__aeabi_fmul
-                0x00009350      0x294 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(mulsf3.o)
-                0x00009350                __aeabi_fmul
+                0x00009390      0x294 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(mulsf3.o)
+                0x00009390                __aeabi_fmul
  .text.__aeabi_fsub
-                0x000095e4      0x494 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(subsf3.o)
-                0x000095e4                __aeabi_fsub
+                0x00009624      0x494 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(subsf3.o)
+                0x00009624                __aeabi_fsub
  .text.__aeabi_f2iz
-                0x00009a78       0x40 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(fixsfsi.o)
-                0x00009a78                __aeabi_f2iz
+                0x00009ab8       0x40 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(fixsfsi.o)
+                0x00009ab8                __aeabi_f2iz
  .text.__aeabi_i2f
-                0x00009ab8       0x90 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(floatsisf.o)
-                0x00009ab8                __aeabi_i2f
+                0x00009af8       0x90 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(floatsisf.o)
+                0x00009af8                __aeabi_i2f
  .text.__aeabi_ui2f
-                0x00009b48       0x84 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(floatunsisf.o)
-                0x00009b48                __aeabi_ui2f
+                0x00009b88       0x84 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(floatunsisf.o)
+                0x00009b88                __aeabi_ui2f
  .text.__aeabi_dadd
-                0x00009bcc      0x828 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(adddf3.o)
-                0x00009bcc                __aeabi_dadd
+                0x00009c0c      0x828 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(adddf3.o)
+                0x00009c0c                __aeabi_dadd
  .text.__aeabi_ddiv
-                0x0000a3f4      0x630 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(divdf3.o)
-                0x0000a3f4                __aeabi_ddiv
- .text.__eqdf2  0x0000aa24       0x94 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(eqdf2.o)
-                0x0000aa24                __nedf2
-                0x0000aa24                __eqdf2
- .text.__gedf2  0x0000aab8       0xd4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(gedf2.o)
-                0x0000aab8                __gedf2
-                0x0000aab8                __gtdf2
- .text.__ledf2  0x0000ab8c       0xd4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(ledf2.o)
-                0x0000ab8c                __ledf2
-                0x0000ab8c                __ltdf2
+                0x0000a434      0x630 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(divdf3.o)
+                0x0000a434                __aeabi_ddiv
+ .text.__eqdf2  0x0000aa64       0x94 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(eqdf2.o)
+                0x0000aa64                __nedf2
+                0x0000aa64                __eqdf2
+ .text.__gedf2  0x0000aaf8       0xd4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(gedf2.o)
+                0x0000aaf8                __gedf2
+                0x0000aaf8                __gtdf2
+ .text.__ledf2  0x0000abcc       0xd4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(ledf2.o)
+                0x0000abcc                __ledf2
+                0x0000abcc                __ltdf2
  .text.__aeabi_dmul
-                0x0000ac60      0x570 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(muldf3.o)
-                0x0000ac60                __aeabi_dmul
+                0x0000aca0      0x570 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(muldf3.o)
+                0x0000aca0                __aeabi_dmul
  .text.__aeabi_dsub
-                0x0000b1d0      0x814 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(subdf3.o)
-                0x0000b1d0                __aeabi_dsub
+                0x0000b210      0x814 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(subdf3.o)
+                0x0000b210                __aeabi_dsub
  .text.__aeabi_dcmpun
-                0x0000b9e4       0x40 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(unorddf2.o)
-                0x0000b9e4                __aeabi_dcmpun
+                0x0000ba24       0x40 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(unorddf2.o)
+                0x0000ba24                __aeabi_dcmpun
  .text.__aeabi_d2iz
-                0x0000ba24       0x70 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(fixdfsi.o)
-                0x0000ba24                __aeabi_d2iz
+                0x0000ba64       0x70 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(fixdfsi.o)
+                0x0000ba64                __aeabi_d2iz
  .text.__aeabi_i2d
-                0x0000ba94       0x68 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(floatsidf.o)
-                0x0000ba94                __aeabi_i2d
+                0x0000bad4       0x68 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(floatsidf.o)
+                0x0000bad4                __aeabi_i2d
  .text.__aeabi_ui2d
-                0x0000bafc       0x48 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(floatunsidf.o)
-                0x0000bafc                __aeabi_ui2d
+                0x0000bb3c       0x48 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(floatunsidf.o)
+                0x0000bb3c                __aeabi_ui2d
  .text.__aeabi_f2d
-                0x0000bb44       0x8c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(extendsfdf2.o)
-                0x0000bb44                __aeabi_f2d
- .text          0x0000bbd0       0x3c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_clzsi2.o)
-                0x0000bbd0                __clzsi2
- .text          0x0000bc0c       0x18 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_clzdi2.o)
-                0x0000bc0c                __clzdi2
+                0x0000bb84       0x8c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(extendsfdf2.o)
+                0x0000bb84                __aeabi_f2d
+ .text          0x0000bc10       0x3c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_clzsi2.o)
+                0x0000bc10                __clzsi2
+ .text          0x0000bc4c       0x18 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_clzdi2.o)
+                0x0000bc4c                __clzdi2
  *(.rodata*)
- .rodata        0x0000bc24      0x330 C:\Users\victus\Desktop\bitirmetezi\build\sim_main.o
- .rodata        0x0000bf54       0x79 C:\Users\victus\Desktop\bitirmetezi\build\fake_sensors.o
- *fill*         0x0000bfcd        0x3 
+ .rodata        0x0000bc64      0x330 C:\Users\victus\Desktop\bitirmetezi\build\sim_main.o
+ .rodata        0x0000bf94       0x79 C:\Users\victus\Desktop\bitirmetezi\build\fake_sensors.o
+ *fill*         0x0000c00d        0x3 
  .rodata.g_scenario
-                0x0000bfd0      0x1e0 C:\Users\victus\Desktop\bitirmetezi\build\fake_sensors.o
- .rodata        0x0000c1b0      0x425 C:\Users\victus\Desktop\bitirmetezi\build\sim_display.o
- *fill*         0x0000c5d5        0x3 
+                0x0000c010      0x1e0 C:\Users\victus\Desktop\bitirmetezi\build\fake_sensors.o
+ .rodata        0x0000c1f0      0x425 C:\Users\victus\Desktop\bitirmetezi\build\sim_display.o
+ *fill*         0x0000c615        0x3 
  .rodata._puts_r.str1.4
-                0x0000c5d8      0x1ab C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-puts.o)
+                0x0000c618      0x1ab C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-puts.o)
                                   0x2 (size before relaxing)
  .rodata._vfprintf_r.str1.4
-                0x0000c783        0x0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfprintf.o)
+                0x0000c7c3        0x0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfprintf.o)
                                  0x42 (size before relaxing)
- *fill*         0x0000c783        0x1 
+ *fill*         0x0000c7c3        0x1 
  .rodata._vfprintf_r
-                0x0000c784      0x204 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfprintf.o)
+                0x0000c7c4      0x204 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfprintf.o)
  .rodata.zeroes.0
-                0x0000c988       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfprintf.o)
+                0x0000c9c8       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfprintf.o)
  .rodata.blanks.1
-                0x0000c998       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfprintf.o)
+                0x0000c9d8       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfprintf.o)
  .rodata.str1.4
-                0x0000c9a8        0x0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-locale.o)
+                0x0000c9e8        0x0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-locale.o)
                                  0x4c (size before relaxing)
  .rodata._dtoa_r.str1.4
-                0x0000c9a8        0x0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-dtoa.o)
+                0x0000c9e8        0x0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-dtoa.o)
                                  0x81 (size before relaxing)
  .rodata.__multadd.str1.4
-                0x0000c9a8        0x0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x0000c9e8        0x0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
                                  0x6e (size before relaxing)
- .rodata.p05.0  0x0000c9a8        0xc C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
- *fill*         0x0000c9b4        0x4 
+ .rodata.p05.0  0x0000c9e8        0xc C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+ *fill*         0x0000c9f4        0x4 
  .rodata.__mprec_bigtens
-                0x0000c9b8       0x28 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
-                0x0000c9b8                __mprec_bigtens
+                0x0000c9f8       0x28 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x0000c9f8                __mprec_bigtens
  .rodata.__mprec_tens
-                0x0000c9e0       0xc8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
-                0x0000c9e0                __mprec_tens
+                0x0000ca20       0xc8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-mprec.o)
+                0x0000ca20                __mprec_tens
  .rodata._ctype_
-                0x0000caa8      0x101 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-ctype_.o)
-                0x0000caa8                _ctype_
+                0x0000cae8      0x101 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-ctype_.o)
+                0x0000cae8                _ctype_
  .rodata.__assert_func.str1.4
-                0x0000cba9        0x0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-assert.o)
+                0x0000cbe9        0x0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-assert.o)
                                  0x43 (size before relaxing)
  .rodata._vfiprintf_r.str1.4
-                0x0000cba9        0x0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfiprintf.o)
+                0x0000cbe9        0x0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfiprintf.o)
                                  0x2f (size before relaxing)
- *fill*         0x0000cba9        0x3 
+ *fill*         0x0000cbe9        0x3 
  .rodata._vfiprintf_r
-                0x0000cbac      0x16c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfiprintf.o)
+                0x0000cbec      0x16c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfiprintf.o)
  .rodata.zeroes.0
-                0x0000cd18       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfiprintf.o)
+                0x0000cd58       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfiprintf.o)
  .rodata.blanks.1
-                0x0000cd28       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfiprintf.o)
+                0x0000cd68       0x10 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-vfiprintf.o)
  .rodata.__aeabi_fdiv
-                0x0000cd38       0x7c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(divsf3.o)
+                0x0000cd78       0x7c C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(divsf3.o)
  .rodata.__aeabi_ddiv
-                0x0000cdb4       0x40 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(divdf3.o)
+                0x0000cdf4       0x40 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(divdf3.o)
  *(.glue_7)
- .glue_7        0x0000cdf4        0x0 linker stubs
+ .glue_7        0x0000ce34        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000cdf4        0x0 linker stubs
+ .glue_7t       0x0000ce34        0x0 linker stubs
  *(.init)
- .init          0x0000cdf4        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp/crti.o
-                0x0000cdf4                _init
- .init          0x0000cdf8        0x8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp/crtn.o
+ .init          0x0000ce34        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp/crti.o
+                0x0000ce34                _init
+ .init          0x0000ce38        0x8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x0000ce00        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp/crti.o
-                0x0000ce00                _fini
- .fini          0x0000ce04        0x8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp/crtn.o
-                0x0000ce0c                        . = ALIGN (0x4)
+ .fini          0x0000ce40        0x4 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp/crti.o
+                0x0000ce40                _fini
+ .fini          0x0000ce44        0x8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp/crtn.o
+                0x0000ce4c                        . = ALIGN (0x4)
 
-.vfp11_veneer   0x0000ce0c        0x0
- .vfp11_veneer  0x0000ce0c        0x0 linker stubs
+.vfp11_veneer   0x0000ce4c        0x0
+ .vfp11_veneer  0x0000ce4c        0x0 linker stubs
 
-.v4_bx          0x0000ce0c        0x0
- .v4_bx         0x0000ce0c        0x0 linker stubs
+.v4_bx          0x0000ce4c        0x0
+ .v4_bx         0x0000ce4c        0x0 linker stubs
 
-.iplt           0x0000ce0c        0x0
- .iplt          0x0000ce0c        0x0 C:\Users\victus\Desktop\bitirmetezi\build\startup_M031Series.o
+.iplt           0x0000ce4c        0x0
+ .iplt          0x0000ce4c        0x0 C:\Users\victus\Desktop\bitirmetezi\build\startup_M031Series.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000ce0c        0x8
-                0x0000ce0c                        __exidx_start = .
+.ARM            0x0000ce4c        0x8
+                0x0000ce4c                        __exidx_start = .
  *(.ARM.exidx*)
  .ARM.exidx.text.__udivmoddi4
-                0x0000ce0c        0x8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
-                0x0000ce14                        __exidx_end = .
-                0x0000ce14                        _sidata = LOADADDR (.data)
+                0x0000ce4c        0x8 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
+                0x0000ce54                        __exidx_end = .
+                0x0000ce54                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x0000ce14        0x0
- .rel.iplt      0x0000ce14        0x0 C:\Users\victus\Desktop\bitirmetezi\build\startup_M031Series.o
+.rel.dyn        0x0000ce54        0x0
+ .rel.iplt      0x0000ce54        0x0 C:\Users\victus\Desktop\bitirmetezi\build\startup_M031Series.o
 
-.data           0x20000000      0x874 load address 0x0000ce14
+.data           0x20000000      0x874 load address 0x0000ce54
                 0x20000000                        _sdata = .
  *(.data*)
  .data.__sglue  0x20000000        0xc C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(libc_a-findfp.o)
@@ -1678,10 +1678,10 @@ LOAD C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/
                 0x20000874                        . = ALIGN (0x4)
                 0x20000874                        _edata = .
 
-.igot.plt       0x20000874        0x0 load address 0x0000d688
+.igot.plt       0x20000874        0x0 load address 0x0000d6c8
  .igot.plt      0x20000874        0x0 C:\Users\victus\Desktop\bitirmetezi\build\startup_M031Series.o
 
-.bss            0x20000874      0x180 load address 0x0000d688
+.bss            0x20000874      0x180 load address 0x0000d6c8
                 0x20000874                        _sbss = .
                 0x20000874                        __bss_start__ = _sbss
  *(.bss*)
@@ -1719,7 +1719,7 @@ LOAD C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/
                 0x200009f4                        _ebss = .
                 0x200009f4                        __bss_end__ = _ebss
 
-._heap          0x200009f4      0x800 load address 0x0000d688
+._heap          0x200009f4      0x800 load address 0x0000d6c8
                 0x200009f4                        . = ALIGN (0x4)
                 0x200009f4                        PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
@@ -1727,7 +1727,7 @@ LOAD C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/
  *fill*         0x200009f4      0x800 
                 0x200011f4                        . = ALIGN (0x4)
 
-._stack         0x200011f4      0x800 load address 0x0000d688
+._stack         0x200011f4      0x800 load address 0x0000d6c8
                 0x200011f4                        . = ALIGN (0x4)
                 0x200019f4                        . = (. + 0x800)
  *fill*         0x200011f4      0x800 
@@ -1964,13 +1964,13 @@ LOAD C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/
  .comment       0x00000045        0x0 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
                                  0x46 (size before relaxing)
 
-.debug_line     0x00000000     0x18a9
+.debug_line     0x00000000     0x18dd
  .debug_line    0x00000000      0x20e C:\Users\victus\Desktop\bitirmetezi\build\startup_M031Series.o
  .debug_line    0x0000020e      0x584 C:\Users\victus\Desktop\bitirmetezi\build\fire_score.o
  .debug_line    0x00000792      0x423 C:\Users\victus\Desktop\bitirmetezi\build\sim_main.o
  .debug_line    0x00000bb5      0x27e C:\Users\victus\Desktop\bitirmetezi\build\fake_sensors.o
  .debug_line    0x00000e33      0x657 C:\Users\victus\Desktop\bitirmetezi\build\sim_display.o
- .debug_line    0x0000148a      0x41f C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_line    0x0000148a      0x453 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
 
 .debug_line_str
                 0x00000000      0x13a
@@ -2002,21 +2002,21 @@ LOAD C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/
                 0x0000013a        0x0 C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v6-m/nofp\libgcc.a(_clzdi2.o)
                                  0xc9 (size before relaxing)
 
-.debug_info     0x00000000     0x1b5d
+.debug_info     0x00000000     0x1b07
  .debug_info    0x00000000      0x169 C:\Users\victus\Desktop\bitirmetezi\build\startup_M031Series.o
  .debug_info    0x00000169      0x4b9 C:\Users\victus\Desktop\bitirmetezi\build\fire_score.o
  .debug_info    0x00000622      0xafa C:\Users\victus\Desktop\bitirmetezi\build\sim_main.o
  .debug_info    0x0000111c      0x208 C:\Users\victus\Desktop\bitirmetezi\build\fake_sensors.o
  .debug_info    0x00001324      0x39b C:\Users\victus\Desktop\bitirmetezi\build\sim_display.o
- .debug_info    0x000016bf      0x49e C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_info    0x000016bf      0x448 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
 
-.debug_abbrev   0x00000000      0x740
+.debug_abbrev   0x00000000      0x728
  .debug_abbrev  0x00000000       0x24 C:\Users\victus\Desktop\bitirmetezi\build\startup_M031Series.o
  .debug_abbrev  0x00000024      0x168 C:\Users\victus\Desktop\bitirmetezi\build\fire_score.o
  .debug_abbrev  0x0000018c      0x23d C:\Users\victus\Desktop\bitirmetezi\build\sim_main.o
  .debug_abbrev  0x000003c9       0xd5 C:\Users\victus\Desktop\bitirmetezi\build\fake_sensors.o
  .debug_abbrev  0x0000049e      0x15f C:\Users\victus\Desktop\bitirmetezi\build\sim_display.o
- .debug_abbrev  0x000005fd      0x143 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_abbrev  0x000005fd      0x12b C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
 
 .debug_aranges  0x00000000      0x230
  .debug_aranges
@@ -2032,19 +2032,19 @@ LOAD C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/
  .debug_aranges
                 0x000001d8       0x58 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
 
-.debug_str      0x00000000     0x8f5d
- .debug_str     0x00000000     0x8f5d C:\Users\victus\Desktop\bitirmetezi\build\startup_M031Series.o
+.debug_str      0x00000000     0x9061
+ .debug_str     0x00000000     0x9061 C:\Users\victus\Desktop\bitirmetezi\build\startup_M031Series.o
                                 0x228 (size before relaxing)
- .debug_str     0x00008f5d        0x0 C:\Users\victus\Desktop\bitirmetezi\build\fire_score.o
+ .debug_str     0x00009061        0x0 C:\Users\victus\Desktop\bitirmetezi\build\fire_score.o
                                0x732e (size before relaxing)
- .debug_str     0x00008f5d        0x0 C:\Users\victus\Desktop\bitirmetezi\build\sim_main.o
+ .debug_str     0x00009061        0x0 C:\Users\victus\Desktop\bitirmetezi\build\sim_main.o
                                0x7d51 (size before relaxing)
- .debug_str     0x00008f5d        0x0 C:\Users\victus\Desktop\bitirmetezi\build\fake_sensors.o
+ .debug_str     0x00009061        0x0 C:\Users\victus\Desktop\bitirmetezi\build\fake_sensors.o
                                0x3e03 (size before relaxing)
- .debug_str     0x00008f5d        0x0 C:\Users\victus\Desktop\bitirmetezi\build\sim_display.o
+ .debug_str     0x00009061        0x0 C:\Users\victus\Desktop\bitirmetezi\build\sim_display.o
                                0x79de (size before relaxing)
- .debug_str     0x00008f5d        0x0 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
-                               0x7c71 (size before relaxing)
+ .debug_str     0x00009061        0x0 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+                               0x7d71 (size before relaxing)
 
 .debug_rnglists
                 0x00000000      0x18b
@@ -2061,7 +2061,7 @@ LOAD C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/
  .debug_rnglists
                 0x0000014e       0x3d C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
 
-.debug_macro    0x00000000     0x2a72
+.debug_macro    0x00000000     0x2a96
  .debug_macro   0x00000000      0x13b C:\Users\victus\Desktop\bitirmetezi\build\fire_score.o
  .debug_macro   0x0000013b      0xac0 C:\Users\victus\Desktop\bitirmetezi\build\fire_score.o
  .debug_macro   0x00000bfb       0x22 C:\Users\victus\Desktop\bitirmetezi\build\fire_score.o
@@ -2101,21 +2101,21 @@ LOAD C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/
  .debug_macro   0x000022f6       0x10 C:\Users\victus\Desktop\bitirmetezi\build\sim_main.o
  .debug_macro   0x00002306       0x85 C:\Users\victus\Desktop\bitirmetezi\build\fake_sensors.o
  .debug_macro   0x0000238b      0x163 C:\Users\victus\Desktop\bitirmetezi\build\sim_display.o
- .debug_macro   0x000024ee      0x1bb C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
- .debug_macro   0x000026a9       0x10 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
- .debug_macro   0x000026b9       0x10 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
- .debug_macro   0x000026c9       0x10 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
- .debug_macro   0x000026d9       0x10 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
- .debug_macro   0x000026e9       0x1c C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
- .debug_macro   0x00002705       0x52 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
- .debug_macro   0x00002757       0x22 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
- .debug_macro   0x00002779       0x10 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
- .debug_macro   0x00002789       0x52 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
- .debug_macro   0x000027db       0xcf C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
- .debug_macro   0x000028aa       0x1c C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
- .debug_macro   0x000028c6       0x3d C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
- .debug_macro   0x00002903       0x3b C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
- .debug_macro   0x0000293e      0x134 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x000024ee      0x1df C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x000026cd       0x10 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x000026dd       0x10 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x000026ed       0x10 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x000026fd       0x10 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x0000270d       0x1c C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x00002729       0x52 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x0000277b       0x22 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x0000279d       0x10 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x000027ad       0x52 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x000027ff       0xcf C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x000028ce       0x1c C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x000028ea       0x3d C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x00002927       0x3b C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
+ .debug_macro   0x00002962      0x134 C:\Users\victus\Desktop\bitirmetezi\build\sim_uart.o
 
 .debug_frame    0x00000000     0x1c2c
  .debug_frame   0x00000000       0xf0 C:\Users\victus\Desktop\bitirmetezi\build\fire_score.o

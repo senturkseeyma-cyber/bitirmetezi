@@ -1,43 +1,52 @@
 /**
  * @file    sim_uart.c
- * @brief   Direkt ARM semihosting ile printf -> terminal
+ * @brief   FVP MPS2 UART0 register retargeting -> telnet terminal
  *
- * rdimon kullanmadan kendi _write ile semihosting SYS_WRITE (0x05) cagrisi.
- * Cortex-M0 Thumb modunda: r0=islem, r1=params, BKPT 0xAB
+ * FVP_MPS2 UART0 adresi: 0x40004000
+ * BAUDDIV=16 ile hizli simülasyon, CRLF donusumu yapilir.
  */
 
 #include <stdint.h>
 #include <sys/stat.h>
 
+/* FVP MPS2 UART0 register adresleri */
+#define UART0_BASE    0x40004000U
+#define UART0_DATA    (*(volatile uint32_t *)(UART0_BASE + 0x00U))
+#define UART0_STATE   (*(volatile uint32_t *)(UART0_BASE + 0x04U))
+#define UART0_CTRL    (*(volatile uint32_t *)(UART0_BASE + 0x08U))
+#define UART0_BAUDDIV (*(volatile uint32_t *)(UART0_BASE + 0x10U))
+
+/* TX tampon dolu biti: bit0 */
+#define UART_TX_FULL  0x01U
+
 /* ----------------------------------------------------------------
- * Direkt semihosting SYS_WRITE (0x05)
- * args[0]=handle, args[1]=data ptr, args[2]=len
+ * UART0 baslat: baud=16 (simülasyonda fark etmez), TX etkin
  * ---------------------------------------------------------------- */
-static void semi_write(int handle, const char *buf, int len)
-{
-    volatile uint32_t args[3];
-    args[0] = (uint32_t)handle;
-    args[1] = (uint32_t)(uintptr_t)buf;
-    args[2] = (uint32_t)len;
-
-    register uint32_t r0 __asm__("r0") = 0x05U; /* SYS_WRITE */
-    register volatile uint32_t *r1 __asm__("r1") = args;
-    __asm__ volatile ("bkpt 0xAB" : "+r"(r0) : "r"(r1) : "memory");
-}
-
-/* FVP baslat: bu modda UART register yok, semihosting yeterli */
 void FVP_UART0_Init(void)
 {
-    /* Direkt semihosting: UART register kurulumuna gerek yok */
+    UART0_BAUDDIV = 16U;
+    UART0_CTRL    = 0x01U; /* TX enable */
+}
+
+static void uart_putchar(char c)
+{
+    while (UART0_STATE & UART_TX_FULL) {} /* TX tampon bos olana dek bekle */
+    UART0_DATA = (uint32_t)(uint8_t)c;
 }
 
 /* ----------------------------------------------------------------
- * Newlib _write: printf -> buraya gelir -> semihosting -> terminal
+ * Newlib _write: printf -> buraya gelir -> UART0 -> FVP telnet
+ * LF -> CRLF donusumu yapilir
  * ---------------------------------------------------------------- */
 int _write(int fd, char *buf, int len)
 {
     (void)fd;
-    semi_write(1, buf, len); /* 1 = stdout */
+    for (int i = 0; i < len; i++) {
+        if (buf[i] == '\n') {
+            uart_putchar('\r');
+        }
+        uart_putchar(buf[i]);
+    }
     return len;
 }
 

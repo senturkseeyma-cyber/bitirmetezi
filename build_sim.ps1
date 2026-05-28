@@ -34,15 +34,17 @@ Write-Host "  [OK] Build basarili  ->  build\orko_sim.elf" -ForegroundColor Gree
 Write-Host "============================================================`n" -ForegroundColor Green
 if (-not (Test-Path $FVP)){ Write-Host "[UYARI] FVP bulunamadi." -ForegroundColor Yellow;exit 0 }
 Write-Host "  FVP baslatiliyor..." -ForegroundColor Cyan
-Write-Host "  Semihosting aktif: printf direkt terminale gelir" -ForegroundColor Cyan
+Write-Host "  UART0 -> Telnet terminali -> CLCD penceresi" -ForegroundColor Cyan
+Write-Host "  Telnet portu icin FVP ciktisindan 'Listening on port XXXX' satirini goruntuleyin" -ForegroundColor Yellow
 Write-Host "============================================================`n" -ForegroundColor Green
 & $FVP `
     "-a" $ELF `
-    "-C" "armcortexm0ct.semihosting-enable=1" `
-    "-C" "fvp_mps2.telnetterminal0.start_telnet=0" `
+    "-C" "armcortexm0ct.semihosting-enable=0" `
+    "-C" "fvp_mps2.UART0.out_file=-" `
+    "-C" "fvp_mps2.telnetterminal0.start_telnet=1" `
     "-C" "fvp_mps2.telnetterminal1.start_telnet=0" `
     "-C" "fvp_mps2.telnetterminal2.start_telnet=0" `
-    "-C" "fvp_mps2.mps2_visualisation.disable-visualisation=1"
+    "-C" "fvp_mps2.mps2_visualisation.disable-visualisation=0"
 Write-Host "`n============================================================" -ForegroundColor Green
 Write-Host "  Simulasyon tamamlandi." -ForegroundColor Green
 Write-Host "============================================================`n" -ForegroundColor Green
