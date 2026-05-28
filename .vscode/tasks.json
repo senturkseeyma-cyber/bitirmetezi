@@ -1,0 +1,174 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ORKO: Build (Simulasyon ELF)",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy", "Bypass",
+                "-File", "${workspaceFolder}/build_sim.ps1"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "PATH": "C:\\Program Files\\CMake\\bin;C:\\arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi\\bin;${env:PATH}"
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": {
+                "owner": "gcc-arm",
+                "fileLocation": ["relative", "${workspaceFolder}"],
+                "pattern": {
+                    "regexp": "^(.+):(\\d+):(\\d+):\\s+(warning|error|note):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "ORKO: Clean Build",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "Remove-Item -Recurse -Force '${workspaceFolder}/build' -ErrorAction SilentlyContinue; Write-Host 'Build klasoru temizlendi.'"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
+            "args": [
+                "-S", "${workspaceFolder}",
+                "-B", "${workspaceFolder}/build",
+                "-G", "MinGW Makefiles",
+                "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/cmake/arm-none-eabi.cmake",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DBUILD_FIRMWARE=OFF"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "2. Build (Simulasyon ELF)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build", "${workspaceFolder}/build",
+                "--target", "orko_sim.elf",
+                "--",
+                "-j4",
+                "VERBOSE=0"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": {
+                "owner": "gcc",
+                "fileLocation": ["relative", "${workspaceFolder}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "label": "1+2. Konfigure Et ve Derle",
+            "dependsOn": [
+                "1. CMake Konfigure Et (Simulasyon)",
+                "2. Build (Simulasyon ELF)"
+            ],
+            "dependsOrder": "sequence",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "3. FVP ile Calistir (terminal ciktisi)",
+            "type": "shell",
+            "command": "C:/Users/victus/AppData/Local/Keil_v5/ARM/avh-fvp/bin/models/FVP_MPS2_Cortex-M0.exe",
+            "args": [
+                "-a", "${workspaceFolder}/build/orko_sim.elf",
+                "--simlimit", "60",
+                "-C", "fvp_mps2.UART0.out_file=-",
+                "-C", "fvp_mps2.telnetterminal0.start_telnet=0",
+                "-C", "fvp_mps2.telnetterminal1.start_telnet=0",
+                "-C", "fvp_mps2.telnetterminal2.start_telnet=0",
+                "-C", "fvp_mps2.semihosting-enable=1"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": [],
+            "dependsOn": ["2. Build (Simulasyon ELF)"]
+        },
+        {
+            "label": "Build + FVP (tek adim)",
+            "dependsOn": [
+                "2. Build (Simulasyon ELF)",
+                "3. FVP ile Calistir (terminal ciktisi)"
+            ],
+            "dependsOrder": "sequence",
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Clean Build",
+            "type": "shell",
+            "command": "Remove-Item",
+            "args": [
+                "-Recurse", "-Force",
+                "${workspaceFolder}/build",
+                "-ErrorAction", "SilentlyContinue"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

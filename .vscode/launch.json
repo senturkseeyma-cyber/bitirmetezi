@@ -1,0 +1,73 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ORKO Sim - FVP Debug (Cortex-Debug)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "external",
+            "gdbPath": "C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gdb.exe",
+
+            "executable": "${workspaceFolder}/build/orko_sim.elf",
+
+            "runToEntryPoint": "main",
+
+            "externalEndpoint": {
+                "address": "localhost",
+                "port": 3333
+            },
+
+            "preLaunchTask": "2. Build (Simulasyon ELF)",
+
+            "showDevDebugOutput": "none",
+
+            "svdFile": "",
+
+            "rttConfig": {
+                "enabled": false
+            },
+
+            "swoConfig": {
+                "enabled": false
+            },
+
+            "request_comment": "Bu konfigürasyon dış GDB server (FVP) ile çalışır.",
+            "howToUse": [
+                "1. Önce terminalde FVP'yi GDB server modunda başlatın:",
+                "   FVP_MPS2_Cortex-M0.exe -a build/orko_sim.elf --simlimit 120 -C fvp_mps2.semihosting-enable=1 --iris-port 3333",
+                "2. Sonra bu debug konfigürasyonunu F5 ile başlatın."
+            ]
+        },
+        {
+            "name": "ORKO Sim - FVP Otomatik (Run Only)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "external",
+
+            "gdbPath": "C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gdb.exe",
+            "executable": "${workspaceFolder}/build/orko_sim.elf",
+
+            "runToEntryPoint": "main",
+            "externalEndpoint": {
+                "address": "localhost",
+                "port": 31627
+            },
+
+            "preLaunchTask": "2. Build (Simulasyon ELF)",
+
+            "serverStarted": "Listening for.*on port 31627",
+
+            "serverpath": "C:/Users/victus/AppData/Local/Keil_v5/ARM/avh-fvp/bin/models/FVP_MPS2_Cortex-M0.exe",
+
+            "serverArgs": [
+                "-a", "${workspaceFolder}/build/orko_sim.elf",
+                "--simlimit", "120",
+                "-C", "fvp_mps2.semihosting-enable=1",
+                "-C", "fvp_mps2.telnetterminal0.start_telnet=0",
+                "-C", "fvp_mps2.telnetterminal1.start_telnet=0",
+                "-C", "fvp_mps2.telnetterminal2.start_telnet=0",
+                "--iris-port", "31627"
+            ]
+        }
+    ]
+}

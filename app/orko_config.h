@@ -12,7 +12,9 @@
 #ifndef ORKO_CONFIG_H
 #define ORKO_CONFIG_H
 
+#ifndef ORKO_SIM
 #include "NuMicro.h"
+#endif
 #include <stdint.h>
 
 /* ================================================================
@@ -83,7 +85,9 @@
  * Tüm I2C sensörler: BMP390, SCD40, HDC2022
  * NOT: PCB şemanıza göre pin numaralarını doğrulayınız.
  */
+#ifndef ORKO_SIM
 #define ORKO_I2C_PORT             I2C0
+#endif
 #define I2C_SPEED_HZ              400000U   /**< 400kHz Fast Mode */
 
 /** I2C Cihaz Adresleri */
@@ -96,19 +100,25 @@
  * ================================================================ */
 
 /** UART0 → NEO-7M GPS */
+#ifndef ORKO_SIM
 #define GPS_UART_PORT             UART0
+#endif
 #define GPS_UART_BAUD             9600U
 #define GPS_RX_BUF_SIZE           128U
 
 /** UART1 → E22-900T22D LoRa */
+#ifndef ORKO_SIM
 #define LORA_UART_PORT            UART1
+#endif
 #define LORA_UART_BAUD            9600U
 #define LORA_RX_BUF_SIZE          64U
 
 /* ================================================================
  * ADC KONFIGÜRASYONU - MQ9 GAZ SENSÖRÜ
  * ================================================================ */
+#ifndef ORKO_SIM
 #define MQ9_ADC_CH                ADC_CH_14_MASK  /**< ADC Channel 14 = PB.14 (şematik pin 4) */
+#endif
 #define MQ9_ADC_CH_NUM            14U
 #define MQ9_VCC_MV                5000U           /**< MQ9 besleme (mV) */
 #define MQ9_RL_KOHM               10.0f           /**< Yük direnci (kΩ) */
@@ -123,12 +133,14 @@
  * ================================================================
  * NOT: PCB şemanıza göre güncelleyiniz.
  */
+#ifndef ORKO_SIM
 #define LORA_M0_PORT              PB             /**< PB.12 - şematik pin 6 */
 #define LORA_M0_BIT               BIT12
 #define LORA_M1_PORT              PF             /**< PF.6 (NRESET) - şematik pin 18 */
 #define LORA_M1_BIT               BIT6           /**< NOT: NRESET/GPIO ortak pin, SYS_UnlockReg gerektirir */
 #define LORA_AUX_PORT             PA             /**< PA.1 - şematik pin 16 */
 #define LORA_AUX_BIT              BIT1
+#endif
 
 /** LoRa Parametre Konfigürasyonu */
 #define LORA_CHANNEL              0U            /**< Kanal 0 */
@@ -139,11 +151,18 @@
 /* ================================================================
  * LED / DURUM GÖSTERGESİ
  * ================================================================ */
+#ifndef ORKO_SIM
 #define LED_PORT                  PB             /**< PB.13 DigitalOut - şematik pin 5 */
 #define LED_BIT                   BIT13
 #define LED_ON()                  (PB13 = 1)  /**< Aktif yüksek */
 #define LED_OFF()                 (PB13 = 0)
 #define LED_TOGGLE()              (PB13 ^= 1)
+#else
+/* Simülasyon: LED işlemleri devre dışı (no-op) */
+#define LED_ON()                  ((void)0)
+#define LED_OFF()                 ((void)0)
+#define LED_TOGGLE()              ((void)0)
+#endif
 
 /* ================================================================
  * GENEL TANIMLAR

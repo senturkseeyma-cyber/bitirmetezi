@@ -1,0 +1,26 @@
+{
+    "cmake.configureArgs": [
+        "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/cmake/arm-none-eabi.cmake",
+        "-DBUILD_FIRMWARE=OFF"
+    ],
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.generator": "MinGW Makefiles",
+    "cmake.buildBeforeRun": true,
+    "cmake.statusBarVisibility": "visible",
+
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.default.compilerPath": "C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gcc.exe",
+
+    "cortex-debug.armToolchainPath": "C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin",
+    "cortex-debug.gdbPath": "C:/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gdb.exe",
+
+    "terminal.integrated.env.windows": {
+        "PATH": "C:\\arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi\\bin;C:\\cmake-4.3.3\\cmake-4.3.3\\bin;${env:PATH}"
+    },
+
+    "files.associations": {
+        "*.h": "c",
+        "*.c": "c",
+        "*.s": "arm"
+    }
+}
