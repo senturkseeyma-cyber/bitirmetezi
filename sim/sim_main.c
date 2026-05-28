@@ -62,8 +62,8 @@ int main(void)
     /* FVP UART0 baslatma: printf buradan -C UART0.out_file=- ile stdout'a */
     FVP_UART0_Init();
 
-    /* Satir tamponlama: her \n'de flush — semihosting'de daha hizli */
-    setvbuf(stdout, NULL, _IOLBF, 0);
+    /* Tampon yok: her printf aninda _write -> semihosting -> terminal */
+    setvbuf(stdout, NULL, _IONBF, 0);
     int8_t             calc_ret;
     uint8_t            alarm_count = 0U;
 

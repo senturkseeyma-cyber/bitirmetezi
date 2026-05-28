@@ -14,7 +14,7 @@ $CPU = @("-mcpu=cortex-m0","-mthumb","-mfloat-abi=soft")
 $INC = @("-I$REPO\app","-I$REPO\algo","-I$REPO\sim","-I$REPO\drivers","-I$REPO\sensors","-I$REPO\lora","-I$REPO\power")
 $CF  = $CPU + @("-DORKO_SIM","-Wall","-Wextra","-O0","-g3","-fdata-sections","-ffunction-sections") + $INC
 $ASF = $CPU + @("-g3")
-$LDF = $CPU + @("-T$REPO\linker\M031_sim.ld","-Wl,--gc-sections","-specs=rdimon.specs","-lc","-lm","-lrdimon","-Wl,-Map=$MAP")
+$LDF = $CPU + @("-T$REPO\linker\M031_sim.ld","-Wl,--gc-sections","-specs=nosys.specs","-lc","-lm","-lnosys","-Wl,-Map=$MAP")
 function GCC-Run([string[]]$a,[string]$lbl) { Write-Host "  $lbl" -ForegroundColor Cyan; & $GCC @a; if ($LASTEXITCODE -ne 0){Write-Host "[HATA] $lbl" -ForegroundColor Red;exit 1} }
 Write-Host "`n============================================================" -ForegroundColor Green
 Write-Host "  ORKO - Simulasyon Build" -ForegroundColor Green
