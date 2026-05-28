@@ -133,13 +133,16 @@ function Parse-Override([string]$line, [ref]$T, [ref]$co2, [ref]$co, [ref]$P, [r
     }
 }
 
-# --- Dairesel tampon ---
-$bufT   = @(0.0) * $SAMPLE_BUF_SIZE
-$bufCO2 = @(0.0) * $SAMPLE_BUF_SIZE
-$bufCO  = @(0.0) * $SAMPLE_BUF_SIZE
-$bufP   = @(0.0) * $SAMPLE_BUF_SIZE
-$bufH   = @(0.0) * $SAMPLE_BUF_SIZE
-$bufCnt = 0; $bufHead = 0
+# --- Dairesel tampon - normal baseline ile on-doldur ---
+# Tampon bos baslarsa adim 1'de avg=cur olur -> paylda sifir/negatif -> NormPos=0
+# Cozum: tamponu FAZ-1 normal degerlerle doldur (gercek firmware da bunu yapar)
+$BASE_T = 23.0; $BASE_CO2 = 420.0; $BASE_CO = 6.0; $BASE_P = 101100.0; $BASE_H = 63.0
+$bufT   = @($BASE_T)   * $SAMPLE_BUF_SIZE
+$bufCO2 = @($BASE_CO2) * $SAMPLE_BUF_SIZE
+$bufCO  = @($BASE_CO)  * $SAMPLE_BUF_SIZE
+$bufP   = @($BASE_P)   * $SAMPLE_BUF_SIZE
+$bufH   = @($BASE_H)   * $SAMPLE_BUF_SIZE
+$bufCnt = $SAMPLE_BUF_SIZE; $bufHead = $SAMPLE_BUF_SIZE
 
 # --- Baslik ---
 Write-Host ""
